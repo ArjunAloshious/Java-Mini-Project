@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=BabyBirths
+comment1.params=
+comment1.target=void\ printNames()
+comment2.params=
+comment2.target=void\ totalBirths()
+comment3.params=rank\ gender
+comment3.target=java.lang.String\ getName(int,\ java.lang.String)
+comment3.text=public\ int\ getRank(String\ name,\ String\ gender)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ int\ Mcount\ \=0,\ Fcount\=0,\ flag\=0;\r\n\ \ \ \ \ \ \ \ FileResource\ fr\ \=\ new\ FileResource();\r\n\ \ \ \ \ \ \ \ for\ (CSVRecord\ rec\ \:\ fr.getCSVParser(false))\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(gender.equals("M")\ &&\ rec.get(1).equals("M"))\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mcount\ +\=\ 1;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(rec.get(0).equals(name))\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\=1;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ Mcount;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ else\ if(gender.equals("F")\ &&\ rec.get(1).equals("F"))\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fcount\ +\=\ 1;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(rec.get(0).equals(name))\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\=1;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ Fcount;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ return\ -1;\r\n\ \ \ \ }\r\n
+comment4.params=name\ gender
+comment4.target=void\ yearOfHighestRank(java.lang.String,\ java.lang.String)
+comment4.text=public\ void\ whatIsNameInYear(String\ name,\ String\ gender,\ int\ year,\ int\ newYear)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ int\ rank\=0;\r\n\ \ \ \ \ \ \ \ String\ tempname\="";\r\n\ \ \ \ \ \ \ \ rank\ \=\ getRank(name,gender);\r\n\ \ \ \ \ \ \ \ tempname\ \=\ getName(rank,\ gender);\r\n\ \ \ \ \ \ \ \ System.out.println(name\ +\ "\ born\ in\ "\ +\ year\ +\ "\ would\ be\ "\ +\ tempname\ +\ "\ if\ she\ was\ born\ in\ "\ +\ newYear);\r\n}
+comment5.params=name\ gender
+comment5.target=void\ getAverageRank(java.lang.String,\ java.lang.String)
+comment6.params=name\ gender
+comment6.target=int\ getTotalBirthsRankedHigher(java.lang.String,\ java.lang.String)
+comment7.params=
+comment7.target=void\ main()
+numComments=8
